@@ -1,0 +1,308 @@
+/* bgc-package: #f2f2f2 */
+/* img-package */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+	box-sizing: border-box;
+	background-image: url('img/background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.title-question {
+	height: 20vh;
+	padding-top: 30px;
+	box-sizing: border-box;
+	/*background-color: red;*/
+	width: 100%;
+	text-align: center;
+	font-size: 36px;
+	font-family: 'Exo 2', sans-serif;
+	color: white;
+}
+
+/* Component ~~~ package-cat ~~~ Component */
+
+.wrapper-packages {
+	width: 100%;
+	min-height: 80vh;
+	margin: 0 auto;
+	margin-top: -5vh;
+	/*background-color: green;*/
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.package-cat {
+	position: relative;
+	width: 300px;
+	height: 480px;
+	background-color: #f2f2f2;
+	border-radius: 8px;
+
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.package-cat:hover {
+	cursor: pointer;
+}
+.package-cat:nth-child(3):hover {
+	cursor: not-allowed;
+}
+
+.package-cat:nth-child(1) {
+	border: solid 4px #1698d9;
+}
+.package-cat:nth-child(2) {
+	border: solid 4px #d91667;
+/*	margin-left: 50px;
+	margin-right: 50px;*/
+}
+.package-cat:nth-child(3) {
+	border: solid 4px #b3b3b3;
+}
+.package-cat:nth-child(3):after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	opacity: 0.6;
+}
+
+.package-cat-text {
+	text-align: left;
+	margin-left: 45px;
+}
+
+.package-cat p {
+	margin-bottom: 20px;
+}
+
+.package-cat p:first-child {
+	margin-top: 25px;
+	color: #666666;
+	font-size: 16px;
+}
+
+.package-cat p:last-child {
+	color: #666666;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.package-cat h2 {
+	margin-bottom: 20px;
+	font-size: 48px;
+	font-weight: bold;
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+.package-cat h3 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.wrap-image-cat {	
+	width: 100%;
+	height: 280px;
+	position: absolute;
+	bottom: 0;
+	overflow: hidden;
+}
+
+.image-cat {
+	position: absolute;
+	width: 330px;
+	bottom: -80px;
+	left: -20px;
+}
+
+.ellipse {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: red;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	font-size: 42px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	line-height: 30px;
+}
+
+.ellipse1 {
+	background-color: #1698d9;
+}
+.ellipse2 {
+	background-color: #d91667;
+}
+.ellipse3 {
+	background-color: #b3b3b3;
+}
+
+.ellipse span {
+	font-size: 21px;
+}
+
+.footnote {
+	width: 100%;
+	position: absolute;
+	bottom: -30px;
+	color: white;
+	font-size: 13px;
+}
+
+.footnote a {
+	color: #1698d9;
+	text-decoration: none;
+	border-bottom: 1px dashed #1698d9;
+}
+
+.package-cat:nth-child(3) .footnote {
+	color: #ffff66;
+}
+
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Адаптивность ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Десктопы (ноутбуки) - основной код */
+
+/* 1 */
+
+@media screen and (max-width: 450px) {
+	.package-cat:nth-child(1) {
+		margin-top: 30px;
+	}
+}
+
+/* 2 */
+
+@media screen and (max-width: 300px) {
+	.title-question {
+		font-size: 34px;
+	}
+	.package-cat:nth-child(1) {
+		margin-top: 50px;
+	}
+	.package-cat {
+		width: 230px;
+		height: 400px;
+	}
+	.package-cat h2 {
+		font-size: 28px;
+		margin-bottom: 10px;
+	}
+	.package-cat h3 {
+		font-size: 18px;
+	}
+	.image-cat {
+		width: 230px;
+	}
+	.package-cat-text {
+		margin-left: 20px;
+	}
+	.wrapper-packages {
+		margin-top: -60px;
+	}
+}
+
+/* 3 */
+
+@media screen and (max-width: 1326px) {
+	.title-question {
+		padding-top: 18px;
+	}
+
+}
+
+/* 4 */
+
+@media screen and (max-width: 250px) {
+	.title-question {
+		font-size: 30px;
+	}
+	.package-cat {
+		width: 200px;
+		height: 330px;
+	}
+}
+
+/* 5 */
+
+@media screen and (max-width: 220px) {
+
+	.title-question {
+		font-size: 25px;
+	}
+	.package-cat {
+		width: 150px;
+		height: 250px;
+	}
+
+	.package-cat h2 {
+		font-size: 18px;
+		margin-top: 0;
+		margin-bottom: 8px;
+	}
+
+	.package-cat h3 {
+		font-size: 14px;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	.package-cat-text {
+		margin-left: 10px;
+		margin-top: -15px;
+	}
+
+	.image-cat {
+		width: 170px;
+		margin-left: 0px;
+		margin-bottom: 30px;
+	}
+
+	.ellipse {
+		width: 60px;
+		height: 60px;
+		font-size: 26px;
+		margin-right: -10px;
+		margin-bottom: -10px;
+	}
+}
+
+@media screen and (max-width: 155px) {
+	.title-question {
+		margin-bottom: 20px;
+	}
+}
+
+
+
+/* не получается обрезать угол))))) */
+
+/*.package-cat {
+	background: linear-gradient(-225deg, transparent 35px, white 0);
+}*/
+
+
